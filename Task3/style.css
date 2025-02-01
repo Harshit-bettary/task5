@@ -1,0 +1,84 @@
+
+body{
+    border:none;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-align: center;
+    background-color:#edbef6;
+    position: relative;
+    color: rgb(41, 140, 254);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(5,100px);
+    grid-template-rows: repeat(5,100px);
+    gap:10px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.restart-btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.restart-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #ea7070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 24px;
+}
+.card.flipped {
+    background-color: #fff;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+    .game-board {
+        grid-template-columns: repeat(5, 80px);
+        grid-template-rows: repeat(5,80px);
+        gap: 8px;
+    }
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-board {
+        grid-template-columns: repeat(5, 60px);
+        grid-template-rows: repeat(5,60px);
+        gap: 5px;
+    }
+    .card {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .restart-btn {
+        position: static;
+        display: block;
+        margin: 10px auto;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
